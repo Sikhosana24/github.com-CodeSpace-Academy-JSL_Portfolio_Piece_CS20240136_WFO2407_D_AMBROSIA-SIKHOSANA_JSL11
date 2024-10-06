@@ -1,3 +1,40 @@
+Loom video: https://www.loom.com/share/effd891d07254587be918902b99ae24a?sid=ee477a9f-0745-4a1f-8d9e-a339e14ca810
+google slide: https://docs.google.com/presentation/d/1YHjuHRGnyMGhHWGiRyP3J8hj50NaoYhvNqVmc18sn9w/edit?usp=sharing
+
+initializeData Function
+What I did: Checked for null in localStorage explicitly to ensure initialData is only added when no data exists. Removed the use of the falsy check ! and replaced it with null validation.
+Challenges: None. .
+
+What I learned: Using explicit null checks for localStorage values provides clarity and prevents unintended behavior when falsy values exist. It ensures consistency in data initialization.
+Bug Fixes
+Bug Fix: Click Event Handlers (Lines 77, 134, 156)
+
+What I did: Replaced incorrect .click() methods with .addEventListener('click', ...) in the displayBoards, filterAndDisplayTasksByBoard, and setupEventListeners functions.
+Why: This ensures the proper attachment of click events for DOM elements.
+Bug Fix: Assignment vs. Equality Operators (Line 141)
+
+What I did: Replaced the assignment operator (=) with the strict equality operator (===) in the filterAndDisplayTasksByBoard function.
+Why: This prevents accidental assignment when filtering tasks and ensures the condition checks the task's board correctly.
+Bug Fix: forEach Method (Line 162)
+
+What I did: Corrected foreach to forEach and used classList.add() and classList.remove() to manage the active board class in the styleActiveBoard function.
+Why: This ensures that the code loops through DOM elements correctly and applies/removes the active class as intended.
+Bug Fix: appendChild() Argument (Line 192)
+
+What I did: Corrected the usage of appendChild() in the addTaskToUI function by passing the taskElement argument.
+Why: Without the argument, no tasks were being appended to the task container, causing the task UI to remain incomplete.
+Solutions to Incomplete Function Code
+Completed toggleSidebar function:
+
+What I did: Fetched the sidebar elements and controlled their display property based on the show argument.
+Why: To allow users to toggle the visibility of the sidebar, freeing up more workspace when needed.
+Completed toggleTheme function:
+
+What I did: Used classList.toggle() to toggle the "light-theme" class on the body. Added a check for the light-theme class to store the user's theme preference in localStorage.
+Why: This enables the user to switch between light and dark modes, with their preference saved for future sessions.
+
+
+
 ### [JSL11] Agile Board - Kanban Task Management App
 
 Welcome to the Agile Board project, the final project for the JSL course! In this portfolio piece project, you will be stepping into the shoes of a juniour developer tasked with bringing a Kanban Task Management App to life. You're not starting from scratch, though. In this project, you are tasked with tackling the provided user stories to both identify and fix bugs in the code, as well as to develop your own functions to extend the application's capabilities. Key assignments include importing utility functions, initializing data, and diving into debugging tasks such as setting up data correctly in local storage, dynamically displaying boards and tasks, and enhancing user interactions.
