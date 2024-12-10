@@ -1,0 +1,13 @@
+{
+  "name": "podcast-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    // ... other dependencies
+  },
+  "scripts": {
+    // ... other scripts
+  },
+  "proxy": "https://podcast-api.netlify.app"
+}
+
